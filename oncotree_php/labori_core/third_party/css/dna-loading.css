@@ -1,0 +1,133 @@
+@keyframes opacity {
+  to {
+    opacity: 1;
+  }
+}
+@keyframes vertical1 {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+    z-index: 1;
+  }
+  50% {
+    transform: translateY(2.5rem) scale(0.25);
+    z-index: 0;
+  }
+}
+@keyframes vertical2 {
+  0%, 100% {
+    transform: translateY(2.5rem) scale(0.25);
+    z-index: 0;
+  }
+  50% {
+    transform: translateY(0) scale(1);
+    z-index: 1;
+  }
+}
+
+.dna-spinner-message
+{
+  margin-top: 55px;
+text-align: center;
+color: #363F4A;
+}
+
+.dna-spinner {
+  display: block;
+  width: 250px;
+  opacity: 0;
+  animation: opacity 500ms linear 1750ms forwards;
+  margin: auto;
+  margin-top: 100px;
+}
+.dna-spinner .row {
+  text-align: center;
+  margin-top: -20px;
+}
+.dna-spinner .row.row-1 {
+}
+.dna-spinner .row.row-1 span {
+  background: #FFCF44;
+  animation: vertical1 2.5s ease-in-out infinite;
+}
+.dna-spinner .row.row-1 span:nth-child(1) {
+  animation-delay: 0.15s;
+}
+.dna-spinner .row.row-1 span:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.dna-spinner .row.row-1 span:nth-child(3) {
+  animation-delay: 0.45s;
+}
+.dna-spinner .row.row-1 span:nth-child(4) {
+  animation-delay: 0.6s;
+}
+.dna-spinner .row.row-1 span:nth-child(5) {
+  animation-delay: 0.75s;
+}
+.dna-spinner .row.row-1 span:nth-child(6) {
+  animation-delay: 0.9s;
+}
+.dna-spinner .row.row-1 span:nth-child(7) {
+  animation-delay: 1.05s;
+}
+.dna-spinner .row.row-1 span:nth-child(8) {
+  animation-delay: 1.2s;
+}
+.dna-spinner .row.row-1 span:nth-child(9) {
+  animation-delay: 1.35s;
+}
+.dna-spinner .row.row-1 span:nth-child(10) {
+  animation-delay: 1.5s;
+}
+.dna-spinner .row.row-1 span:nth-child(11) {
+  animation-delay: 1.65s;
+}
+.dna-spinner .row.row-1 span:nth-child(12) {
+  animation-delay: 1.8s;
+}
+.dna-spinner .row.row-2 span {
+  background: #272B33;
+  animation: vertical2 2.5s ease-in-out infinite;
+}
+.dna-spinner .row.row-2 span:nth-child(1) {
+  animation-delay: 0.15s;
+}
+.dna-spinner .row.row-2 span:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.dna-spinner .row.row-2 span:nth-child(3) {
+  animation-delay: 0.45s;
+}
+.dna-spinner .row.row-2 span:nth-child(4) {
+  animation-delay: 0.6s;
+}
+.dna-spinner .row.row-2 span:nth-child(5) {
+  animation-delay: 0.75s;
+}
+.dna-spinner .row.row-2 span:nth-child(6) {
+  animation-delay: 0.9s;
+}
+.dna-spinner .row.row-2 span:nth-child(7) {
+  animation-delay: 1.05s;
+}
+.dna-spinner .row.row-2 span:nth-child(8) {
+  animation-delay: 1.2s;
+}
+.dna-spinner .row.row-2 span:nth-child(9) {
+  animation-delay: 1.35s;
+}
+.dna-spinner .row.row-2 span:nth-child(10) {
+  animation-delay: 1.5s;
+}
+.dna-spinner .row.row-2 span:nth-child(11) {
+  animation-delay: 1.65s;
+}
+.dna-spinner .row.row-2 span:nth-child(12) {
+  animation-delay: 1.8s;
+}
+.dna-spinner span {
+  display: inline-block;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+}

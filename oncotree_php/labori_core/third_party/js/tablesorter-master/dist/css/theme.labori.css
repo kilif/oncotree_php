@@ -1,0 +1,70 @@
+
+.tablesorter .header,
+.tablesorter .tablesorter-header {
+	cursor: pointer;
+}
+.tablesorter .headerSortUp,
+.tablesorter .tablesorter-headerSortUp,
+.tablesorter .tablesorter-headerAsc {
+	position: relative
+}
+
+.tablesorter-headerNoSort:after {
+	border: none !important;
+}
+
+.tablesorter-headerUnSorted {
+	position: relative
+}
+
+.tablesorter-headerUnSorted:after {
+	content: "";
+	position: absolute;
+	right: 3px;
+	top: 45%;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-bottom: 5px solid#434955;
+	border-top: none;
+}
+
+.tablesorter-headerAsc:after {
+	content: "";
+	position: absolute;
+	right: 3px;
+	top: 45%;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-bottom: 5px solid #FFCF44;
+	border-top: none;
+}
+
+.tablesorter-headerDesc:after {
+	position: absolute;
+	right: 3px;
+	top: 45%;
+	content: "";
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 5px solid #FFCF44;
+	border-bottom: none;
+}
+
+.tablesorter .headerSortDown,
+.tablesorter .tablesorter-headerSortDown,
+.tablesorter .tablesorter-headerDesc {
+	position: relative
+}
+.tablesorter thead .sorter-false {
+	/* border none */
+	cursor: default;
+	padding: 4px;
+}
+
+/* tfoot */
+.tablesorter tfoot .tablesorter-headerSortUp,
+.tablesorter tfoot .tablesorter-headerSortDown,
+.tablesorter tfoot .tablesorter-headerAsc,
+.tablesorter tfoot .tablesorter-headerDesc {
+	/* border none */
+}

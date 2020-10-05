@@ -1,0 +1,2824 @@
+/**********************************************************/
+/*CSS VARIABLES	                                          */
+/**********************************************************/
+:root 
+{ 
+	--primary-color: #FFCF44;
+}
+
+/**********************************************************/
+/*HTML ELEMENTS	                                          */
+/**********************************************************/
+body
+{
+	font-family: 'opensans';
+	font-size:11pt;
+	color: #F1F1F1;
+	background: #F1F1F1;
+	margin:0px;
+	padding:0px;
+	height: 100%;
+	width:	100%;
+}
+
+form
+{
+	margin:0px;
+}
+
+input 
+{
+	-webkit-appearance: none !important; 
+	box-shadow: none !important; 
+}
+
+input:-webkit-autofill 
+{ 
+	-webkit-box-shadow:inset 0 1px 1px #33333D, 0 0 0 100px #33333D inset!important; 
+	-webkit-transition:none; 
+	-webkit-text-fill-color: #B9B9BC !important;
+}
+
+input:focus 
+{
+	outline:0;
+}
+
+input[type="file"] 
+{
+    display: none;
+}
+
+a
+{
+	text-decoration: underline;
+	color: #FFCF44;
+}
+
+/**********************************************************/
+/*CLEAR FIX			                           			  */
+/**********************************************************/
+.group:after 
+{
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/**********************************************************/
+/*DISABLE SCROLL                                 		  */
+/**********************************************************/
+.disable_scroll
+{
+	overflow: hidden;
+}
+
+/**********************************************************/
+/*CORE BASE COMPONENTS                                    */
+/**********************************************************/
+#labori_core_app_logo
+{
+	margin: -7px;
+}
+
+#labori_core_sidebar
+{
+	height: 100%;
+	width: 70px;
+	background: #272B33;
+	position: fixed;
+	left:0px;
+	top:0px;
+	border-right: 5px solid #F1F1F1;
+}
+
+#labori_core_sidebarCap_container
+{
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+#labori_core_navheader
+{
+	min-width: 900px;
+	background: #363F4A;
+	position: fixed;
+	height: 27px;
+	left: 70px;
+	right: 0px;
+	top: 0px;
+	padding-top: 5px;
+	padding-left: 2px;
+	padding-right: 2px;
+	border-bottom: 3px solid #FFCF44;
+	z-index: 6;
+}
+
+.labori_test_instance_header
+{
+	background: #B8221D !important;
+}
+
+#labori_core_content
+{
+	width: auto;
+	min-height: 100%;
+	background: #F1F1F1;
+	margin-left: 70px;
+	margin-top: 34px;
+	padding: 20px;
+}
+
+/**********************************************************/
+/*TOOL TIP                                    	  		  */
+/**********************************************************/
+.labori_tooltip 
+{
+	position: relative;
+}
+
+.labori_tooltip .labori_tooltiptext 
+{
+	visibility: hidden;
+	width: 110px;
+	background-color: #ffcf44;
+	text-align: center;
+	padding: 5px;
+	border-radius: 6px;
+	font-size: 8pt;
+	position: absolute;
+	z-index: 5;
+	left: 50%;
+	max-width: 110px;
+	margin-left: -62px;
+	overflow-wrap: break-word;
+	height: auto;
+	white-space: pre-wrap;
+	bottom: 100%;
+	margin-bottom: 15px;
+	color: #272b33;
+	line-height: 15px;
+}
+
+.labori_tooltip .labori_tooltiptext_noHover 
+{
+	visibility: hidden;
+	width: 110px;
+	background-color: #ffcf44;
+	text-align: center;
+	padding: 5px;
+	border-radius: 6px;
+	font-size: 8pt;
+	position: absolute;
+	z-index: 6;
+	left: 50%;
+	max-width: 110px;
+	margin-left: -62px;
+	overflow-wrap: break-word;
+	height: auto;
+	white-space: pre-wrap;
+	bottom: 100%;
+	margin-bottom: 15px;
+	color: #272b33;
+	line-height: 15px;
+}
+
+.labori_tooltip_shown .labori_tooltiptext_noHover 
+{
+	visibility: visible;
+}
+
+.labori_tooltip:hover .labori_tooltiptext 
+{
+	visibility: visible;
+}
+
+.labori_tooltip .labori_tooltiptext_noHover::after
+{
+	content: " ";
+	position: absolute;
+	z-index: 1;
+	top: 100%; 
+	left: 50%;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: #ffcf44 transparent transparent transparent;
+}
+
+.labori_tooltip .labori_tooltiptext::after 
+{
+	content: " ";
+	position: absolute;
+	z-index: 1;
+	top: 100%; 
+	left: 50%;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: #ffcf44 transparent transparent transparent;
+}
+
+/**********************************************************/
+/*CHART COMPONENTS                                    	  */
+/**********************************************************/
+.labori_small_chart_wrapper
+{
+	width:100%;
+	min-width: 1200px;
+}
+
+.labori_small_chart_box
+{
+	border-radius: 2px;
+	background: #3e4752;
+	width: 40%;
+	float: left;
+	height:250px;
+}
+
+.labori_small_chart_box_tabbed
+{
+	border-radius: 2px;
+	width: 100%;
+	height: 400px;
+	padding-bottom: 80px;
+}
+
+.labori_large_chart_box
+{
+	border-radius: 2px;
+	background: #3e4752;
+	width: 100%;
+	float: left;
+	max-height: 400px;
+}
+
+.labori_large_chart_title
+{
+	border-radius: 2px;
+	background: #3e4752;
+	width: 100%;
+	padding-top:10px;
+	padding-bottom:5px;
+}
+
+.labori_large_chart_title_divider
+{
+	width: 98%;
+	border-bottom: 2px solid #FFCF44;
+	margin-right:40px;
+	margin-left:10px;
+}
+
+.labori_large_chart_title span
+{
+	margin:10px;
+	margin-top:20px;
+	color: white;
+	font-size: 1.2em;
+}
+
+.labori_large_chart_title span i
+{
+	color: #FFCF44;
+	margin-right: 5px;
+}
+
+.labori_large_chart_details
+{
+	border-radius: 2px;
+	background: #3e4752;
+	width: 100%;
+	float: right;
+	min-height:250px;
+}
+
+.labori_small_chart_details
+{
+	border-radius: 2px;
+	background: #3e4752;
+	width: 59%;
+	float: right;
+	min-height:250px;
+}
+
+.labori_small_chart_details_tabbed
+{
+	border-radius: 2px;
+	background: #3e4752;
+	width: 100%;
+	min-height:250px;
+}
+
+.labori_small_chart_details_divider
+{
+	clear: both;
+	flex: 2;
+	flex-flow: column;
+	width: 100%;
+	max-width: 100%;
+	min-width: 100%;
+	margin-top:10px;
+	border-bottom: 1px dotted #FFCF44;
+}
+
+.labori_small_chart_details_tabbed .labori_small_chart_title
+{
+	padding-top:5px;
+}
+
+.labori_small_chart_title
+{
+	color: white;
+	font-size: 1.2em;
+	border-bottom: 2px solid #FFCF44;
+}
+
+.labori_small_chart_title i
+{
+	color: #FFCF44;
+	margin-right: 5px;
+}
+
+.labori_small_chart_detail_row_container
+{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.labori_small_chart_detail_field
+{
+	flex: 1;
+	flex-flow: column;
+	display: inline-block;
+	float: left;
+	min-width: 45%;
+	max-width: 45%;
+	background: #363f4a;
+	margin-right: 10px;
+	margin-top: 10px;
+	padding: 5px;
+	border-radius: 2px;
+}
+
+.labori_small_chart_detail_field.block_content_special
+{
+	background: #272b33;
+	min-width: 99%;
+	max-width: 99%
+}
+
+.labori_small_chart_detail_field_name
+{
+	display: inline-block;
+	float:left;
+	width:65%;
+	color: #FFCF44;
+}
+
+.labori_small_chart_detail_field_value
+{
+	display: inline-block;
+	float:right;
+	width:30%;
+}
+
+/**********************************************************/
+/*REPORT SUMMARY                        				  */
+/**********************************************************/
+.labori_summary_details_tabbed
+{
+	border-radius: 2px;
+	background: #2B343F;
+	width: 100%;
+	margin-bottom: 20px;
+	border: 2px solid #1d2631;
+}
+
+.labori_summary_details_tabbed .labori_small_chart_title
+{
+	padding-top:5px;
+}
+
+.labori_summary_details_title
+{
+	color: #FFCF44;
+	font-size: 1.2em;
+	border-bottom: 1px solid #FFCF44;
+}
+
+.labori_summary_details_title i
+{
+	color: #FFCF44;
+	margin-right: 5px;
+}
+
+.labori_summary_detail_row_container
+{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.labori_summary_detail_field
+{
+	flex: 1;
+	flex-flow: column;
+	display: inline-block;
+	justify-content: space-between;
+	flex-direction: column;
+	float: left;
+	min-width: 45%;
+	max-width: 45%;
+	background: #1D2631;
+	margin-right: 10px;
+	margin-top: 10px;
+	padding: 5px;
+}
+
+.labori_summary_detail_field_name
+{
+	display: inline-block;
+	float: left;
+	min-width: 65%;
+	max-width: 65%;
+	color: #F1F1F1;
+}
+
+.labori_summary_detail_field_value
+{
+	display: inline-block;
+	float:right;
+	width:30%;
+}
+
+/**********************************************************/
+/*CORE NAV HEADER                         				  */
+/**********************************************************/
+#labori_core_navHolder
+{
+	float:left;
+	font-size: 12pt;
+	color: #F1F1F1;
+	margin-left:10px;
+}
+
+#labori_core_navHolder i 
+{
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+#labori_core_navUserHolder
+{
+	float:right;
+	width:auto;
+}
+
+.labori_core_navLink
+{
+	cursor: pointer;
+}
+
+.labori_core_navLink:hover
+{
+	text-decoration: underline;
+}
+
+.labori_core_navCurLink
+{
+	color:#FFCF44;
+	cursor: pointer;	
+}
+
+.labori_core_navCurLink:hover
+{
+	text-decoration: underline;
+}
+
+.labori_core_navButton
+{
+	float: right;
+	background: #363F4A;
+	font-size: 9pt;
+	padding: 2px;
+	text-align: center;
+	margin-right: 5px;
+	border-radius: 2px;
+	color: #FFCF44;
+	cursor: pointer;
+	-webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -ms-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+}
+
+.labori_core_navButton:hover
+{
+	color: #363F4A;
+	background: #FFCF44;	
+	font-size: 10pt;
+	-webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -ms-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+}
+
+.labori_core_navButtonImportant
+{
+	float: right;
+	background: #363F4A;
+	font-size: 9pt;
+	padding: 2px;
+	text-align: center;
+	margin-right: 5px;
+	border-radius: 2px;
+	color: #FF6951;
+	cursor: pointer;
+	-webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -ms-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+}
+
+.labori_core_navButtonImportant:hover
+{
+	color: #363F4A;
+	background: #FF6951;
+	font-size: 10pt;
+	-webkit-transition: all 0.25s ease-in;
+    -moz-transition: all 0.25s ease-in;
+    -ms-transition: all 0.25s ease-in;
+    -o-transition: all 0.25s ease-in;
+    transition: all 0.25s ease-in;
+}
+
+/**********************************************************/
+/*CORE SIDEBAR                         					  */
+/**********************************************************/
+#labori_core_sidebarCap
+{
+	font-size: 5pt;
+	text-align: center;
+	font-weight: lighter;
+	height: 22px;
+	border-bottom: 3px #FFCF44 solid;
+	padding-top: 10px;
+	background: white;
+}
+
+.labori_core_sidebarLink
+{
+	height: auto;
+	text-align: center;
+	padding: 5px;
+	padding-top:10px;
+	padding-bottom:10px;
+	color: #FFCF44;
+	cursor: pointer;
+	width:60px;
+	border-bottom: 1px solid #363F4A;
+	-webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -ms-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+}
+
+.labori_core_sidebarLink:hover
+{
+	background: #FFCF44;
+	color: #363F4A;
+	-webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -ms-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+}
+
+.labori_core_sidebarLinkIcon
+{
+	font-size: 25pt;
+}
+
+.labori_core_sidebarLinkDesc
+{
+	font-size: 9px;
+}
+
+
+.labori_core_sidebarLink:hover .labori_core_sidebarLinkIcon
+{
+	font-size: 27pt;
+}
+
+/**********************************************************/
+/*FILE BLOCK                       					  	  */
+/**********************************************************/
+.labori_content_file_block_container
+{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.labori_content_file_block
+{
+	margin-right:20px;
+	margin-bottom:20px;
+	color: #F1F1F1;
+	width:250px;
+	cursor: pointer;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	font-size: 10pt;
+	border-radius: 2px;
+}
+
+.labori_content_file_block_cap
+{
+	font-size: 12pt;
+	width:auto;
+	padding:10px;
+	min-height:30px;
+	height:auto;
+	border-top-left-radius: 2px;
+	border-top-right-radius: 2px;
+	background: #272b33;
+	font-weight: bold;
+	border-bottom: 1px solid #FFCF44;
+	-webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -ms-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+}
+
+.labori_content_file_block:hover .labori_content_file_block_cap
+{
+	color: #FFCF44;
+	-webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -ms-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+}
+
+.labori_content_file_block_body
+{
+	width:auto;
+	min-height:155px;
+	padding:5px;
+	padding-top:10px;
+	background: #5a636e;
+	border-bottom-left-radius:  2px;
+	border-bottom-right-radius:  2px;
+	line-height: 25px;
+	flex: 1;
+	position: relative;
+
+	-webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -ms-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+}
+
+.labori_content_file_block_content_inner
+{
+	opacity: 1;
+	-webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -ms-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+}
+
+.labori_content_file_block_body:hover .labori_content_file_block_content_inner
+{
+	opacity: 0;
+	-webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -ms-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+}
+
+.labori_content_file_block_body:hover .labori_content_file_block_body_download
+{
+	opacity: 1;
+	-webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -ms-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+}
+
+.labori_content_file_block_body_download
+{
+	opacity: 0;
+	font-size: 20pt;
+	color: #FFCF44;
+	text-align: center;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	-webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -ms-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+}
+
+.labori_content_file_block_body_download i
+{
+	font-size: 40pt;
+	margin-bottom:10px;
+	margin-top:30px;
+}
+
+.labori_content_file_block_content
+{
+	width:100%;
+	position: relative
+}
+
+/**********************************************************/
+/*LINK BLOCK                       					  	  */
+/**********************************************************/
+.labori_content_link_block_container
+{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.labori_content_link_block
+{
+	margin-right:10px;
+	margin-bottom:10px;
+	color: #F1F1F1;
+	max-width:32%;
+	width:32%;
+	min-width: 400px;
+	cursor: pointer;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+}
+
+.labori_content_link_block:hover .labori_content_link_block_cap
+{
+	color: #FFCF44;
+	font-size:17pt;
+	-webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -ms-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+}
+
+.labori_content_link_block_cap
+{
+	font-size:15pt;
+	width:auto;
+	padding:10px;
+	height:30px;
+	border-top-left-radius: 2px;
+	border-top-right-radius: 2px;
+	background: #272B33;
+	border-bottom: 2px solid #FFCF44;
+	-webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -ms-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+}
+
+.labori_content_link_block_body
+{
+	width:auto;
+	min-height:150px;
+	padding:10px;
+	padding-top:20px;
+	background: #363F4A;
+	border-bottom-left-radius:  2px;
+	border-bottom-right-radius:  2px;
+	line-height: 25px;
+	flex: 1;
+}
+
+.labori_content_link_block_content
+{
+	width:60%;
+	float:left;
+	display: inline-block;
+}
+
+.labori_content_link_block:hover .labori_content_link_block_icon
+{
+	color: #FFCF44;
+	font-size: 62pt;
+	-webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -ms-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+}
+
+.labori_content_link_block_icon
+{
+	color: #272B33;
+	width: 30%;
+	float: right;
+	display: inline-block;
+	font-size: 60pt;
+	-webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -ms-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+}
+
+/**********************************************************/
+/*PROJECTS                     			  				  */
+/**********************************************************/
+#labori_project_main_container
+{
+	width:100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#labori_project_timeline_item_container
+{
+	max-width:30%; 
+	min-height: 900px; 
+	display: inline-block; 
+	float: left; 
+	background: #3e4752; 
+	border-radius: 2px; 
+	height: auto;
+	flex-grow: 1;
+	flex: 1 1 30%;
+	margin-right: 10px;
+	text-align: left;
+}
+
+#labori_project_timeline_title
+{
+    font-size: 15pt;
+    border-bottom: 2px solid #FFCF44;
+    font-weight: normal;
+    color: white !important;
+    background: #272b33;
+    padding: 6px;
+    padding-left: 10px;
+}
+
+#labori_project_timeline_title i
+{
+	color: #FFCF44;
+	margin-right: 10px;
+}
+
+#labori_project_timeline_item_inner_container
+{
+	padding:10px;
+	height: auto;
+	text-align: center;
+	max-height: 1200px;
+	overflow-y: scroll;
+}
+
+#labori_project_timeline_review_container
+{
+	max-width:68%; 
+	min-height: 900px; 
+	display: inline-block; 
+	float: right;
+	height: auto;
+	flex-grow: 1;
+	flex: 1 1 68%;
+}
+
+.labori_project_timeline_obj
+{ 
+	border: 3px solid #F1F1F1; 
+	min-height: 100px; 
+	text-align: justify; 
+	width: 55%; 
+	padding-left: 10px; 
+	padding-right: 10px; 
+	padding-top: 5px; 
+	padding-bottom: 5px;
+	margin-right: auto;
+	margin-left: auto;
+	background: #272b33; 
+	border-radius:2px;
+}
+
+.labori_project_timeline_obj.main_item
+{ 
+	width:75%;
+	border: 3px solid #1EB980;
+}
+
+.main_item .labori_project_timeline_obj_title 
+{
+	color: #1EB980;
+}
+
+.labori_project_timeline_obj.pending_item
+{ 
+	width:75%;
+	border: 3px solid #ffcf44;
+}
+
+.pending_item .labori_project_timeline_obj_title 
+{
+	color: #ffcf44;
+}
+
+.labori_project_timeline_obj.bad_item
+{ 
+	width:75%;
+	border: 3px solid #FF6951;
+}
+
+.bad_item .labori_project_timeline_obj_title 
+{
+	color: #FF6951;
+}
+
+.labori_project_timeline_obj_title
+{
+	font-size: 1.2em; 
+	color: #F1F1F1; 
+	border-bottom: 1px dotted #F1F1F1; 
+	opacity:0.7; 
+	margin-bottom:5px;
+}
+
+.labori_timeline_connectors
+{
+	position: relative; 
+	width:1px; 
+	border-left: 5px dotted #272b33; 
+	height:80px; 
+	margin-left:auto; 
+	margin-right:auto;
+	margin-top: 10px; 
+	margin-bottom: 10px;">
+}
+
+.labori_timeline_unknown_end
+{
+    width: 100px;
+	height: 100px;
+	border-radius: 20pt;
+	font-size: 50pt;
+	opacity: 0.2;
+}
+
+.labori_timeline_unknown_end i
+{
+	position: relative;
+	left: 28px;
+	top: 15px;
+}
+
+.labori_scroll_cell
+{
+	max-height: 300px;
+	overflow-y: scroll;
+}
+
+.labori_thick_row_borders .labori_table_row
+{
+	border-bottom: 2px solid #363f4a !important;
+}
+
+/**********************************************************/
+/*PROGRAM SIMULATION                         			  */
+/**********************************************************/
+.labori_program_loading
+{
+	text-align: center;
+	background: #3e4752;
+	padding: 10px;
+	border-radius: 2px;
+	color: #FFCF44;
+}
+
+.labori_sim_imp_text
+{
+	color: #FFCF44;
+	font-size: 1.05em;
+	margin-right:5px;
+}
+
+.simulation_program_container
+{
+	background: #3e4752;
+    padding: 10px;
+    min-width:650px;
+    width: 60%;
+    margin-bottom: 20px;
+    float: left;
+    display: inline-block;
+}
+
+.simulation_program_name
+{
+	font-size: 1.3em;
+	color: #FFCF44;
+	border-bottom: 1px solid #FFCF44;
+
+}
+
+.simulation_program_details_container
+{
+	padding:10px;
+	border: 2px dotted #2B343F;
+	margin-top:10px;
+}
+
+.simulation_program_details_container .simulation_detail_row_container
+{
+	background: #353e49;
+	font-size: 1em;
+	margin-bottom: 5px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+.simulation_program_details_container .simulation_detail_row_label
+{
+	
+}
+
+.simulation_program_details_container .simulation_detail_row_value
+{
+
+}
+
+.simulation_program_member_container
+{
+	padding:10px;
+	height: 800px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	border: 2px dotted #2B343F;
+	margin-top: 10px;
+}
+
+.simulation_member_container
+{
+	padding: 10px;
+	width: 300px;
+	height: auto;
+	float: left;
+	display: inline-block;
+	background: #353e49;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	border-radius: 2px;
+	border: 1px solid #FFCF44;
+}
+
+.simulation_detail_row_container
+{
+	padding-left: 5px;
+	padding-right: 5px;
+	border-radius: 2px;
+	border-bottom: 1px dotted #272b33;
+	font-size: 0.6em;
+}
+
+.simulation_detail_row_label
+{	
+	float: left;
+	color: #FFCF44;
+	font-weight: bold;
+	max-width: 45%;
+	height: auto;
+	width:45%;
+}
+
+.simulation_detail_row_value
+{
+	float: right;
+	max-width: 45%;
+	height: auto;
+	width: 45%;
+}
+
+/**********************************************************/
+/*LABELED FIELD	                           			  	  */
+/**********************************************************/
+.labori_sub_block_container
+{
+	border: 2px solid #67707B;
+	padding: 10px;
+	border-radius: 2px;
+}
+
+.labori_group_border
+{
+	border: 2px solid #FFCF44;
+	padding: 5px;
+	border-radius: 2px;
+}
+
+.labori_field_sub_message
+{
+	max-width: 98%;
+	font-size: 0.8em;
+	color: #FFCF44;
+	text-align: justify;
+	line-height: 13px;
+}
+
+.labori_simple_dark_field_group
+{
+	background: #363F4A; 
+	padding:5px; 
+	border-radius: 2px; 
+	margin-bottom:5px;
+}
+
+.labori_table_field_group
+{
+	margin-bottom:5px;
+	padding: 5px;
+	background: #3E4752; 
+	border-radius: 2px;
+}
+
+.labori_table_field_group .labori_labeled_field_label 
+{
+	color:#FFCF44;
+}
+
+.labori_table_field_group_dark
+{
+	margin-bottom:5px;
+	padding: 5px;
+	background: #363F4A; 
+	border-radius: 2px;
+}
+
+.labori_table_field_group_dark .labori_labeled_field_label 
+{
+	color:#FFCF44;
+}
+
+.labori_grouped_field .labori_labeled_field
+{
+	width:100% !important;
+}
+
+.labori_grouped_field
+{
+	/*width: 48%;
+	max-width: 48%;
+	min-width: 500px;
+	min-height: 28px;	
+	margin-right: 20px;
+	border-radius: 2px;
+	flex: 1;
+	flex-flow: column;*/
+	min-height: 28px;
+	margin-right: 20px;
+	border-radius: 2px;
+	flex-grow: 1;
+	flex: 1 1 48%;
+	max-width: 48%;
+}
+
+.labori_labeled_field_container
+{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+/*.labori_labeled_field
+{
+	flex: 1;
+	flex-flow: column;
+	width: 48%;
+	max-width: 48%;
+	min-width: 500px;
+	min-height: 28px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	padding: 5px;
+	border-radius: 2px;
+	background: #3E4752;
+}*/
+
+.labori_labeled_field
+{
+	min-height: 28px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	padding: 5px;
+	border-radius: 2px;
+	background: #3E4752;
+	flex-grow: 1;
+	flex: 1 1 48%;
+	max-width: 48%;
+}
+
+.labori_table_row_item .labori_labeled_field
+{
+	flex: 1;
+	width: 100%;
+	margin-bottom: 5px;
+	padding: 5px;
+	border-radius: 2px;
+	background: #3E4752;
+	flex-wrap: nowrap;
+	max-width: 100%;
+	min-width: 0px;
+	min-height: 0px;
+	margin-right: 0px;
+	margin-bottom: 5px;
+	padding: 0px;
+}
+
+.labori_grouped_field .labori_labeled_field
+{
+	width:100%;
+	min-width: 100%;
+	max-width: 100%;
+}
+
+.labori_table_row_item .labori_labeled_field .labori_labeled_field_label
+{
+	margin:5px;
+	width:35%;
+	font-size: 0.7em;
+}
+
+.labori_table_row_item .labori_labeled_field .labori_labeled_field_field
+{
+	margin:5px;
+	width:50%;
+	font-size: 0.7em;
+}
+
+.labori_labeled_field_label
+{
+	float: left;
+	display: inline-block;
+	width: 45%;
+}
+
+.labori_labeled_field_label.yellow
+{
+	color:#FFCF44;
+}
+
+.labori_labeled_field_field
+{
+	float: right;
+	display: inline-block;
+	width:50%;
+}
+
+/**********************************************************/
+/*TIMELINE                      			  			  */
+/**********************************************************/
+.labori_timeline_details_container
+{
+	border-radius: 2px;
+	padding: 5px;
+}
+
+.labori_timeline_bubble_details
+{
+	-webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -ms-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+
+	display: none;
+	background: #272B33;
+	padding: 5px;
+	border-radius: 2px;
+	color: #44C0FF;
+	cursor: pointer;
+}
+
+.labori_timeline_bubble_details_noclick
+{
+	display: none;
+	background: #272B33;
+	padding: 5px;
+	border-radius: 2px;
+	color: #44C0FF;
+}
+
+.labori_timeline_bubble_details:hover .labori_timeline_details_icon
+{
+	-webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -ms-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+    color: #44C0FF;
+	border-right: 3px solid #44C0FF;
+}
+
+.labori_timeline_details_icon
+{
+	-webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -ms-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+	font-size: 60pt;
+	float: left;
+	display: inline-block;
+	padding: 10px;
+	color: #363F4A;
+	border-right: 3px solid #363F4A;
+	padding-right: 15px;
+}
+
+.labori_timeline_details_text
+{
+	-webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -ms-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+	float:left;
+	display: inline-block;
+	padding: 10px;
+	color: #F1F1F1;
+	max-width: 90%;
+}
+
+/**********************************************************/
+/*SLIDER                     				  			  */
+/**********************************************************/
+.labori_slider
+{
+	-webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    height: 10px; /* Specified height */
+    outline: none; /* Remove outline */
+    opacity: 1.0; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+    background: transparent;
+}
+
+.labori_slider:focus 
+{
+  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+.labori_slider:hover 
+{
+    opacity: 1; /* Fully shown on mouse-over */
+}
+
+.labori_slider::-moz-range-track 
+{
+	background: #272B33;
+	height: 4px;
+	border-radius: 0px;
+	cursor: pointer;
+	border: 1px solid #FFCF44;
+}
+
+.labori_slider::-webkit-slider-runnable-track 
+{
+	-webkit-appearance: none; /* Override default look */
+    appearance: none;
+    background: #272B33;
+	height: 4px;
+	border-radius: 0px;
+	cursor: pointer;
+	border: 1px solid #FFCF44;
+}
+
+.labori_slider::-ms-track 
+{
+	width: 100%;
+	cursor: pointer;
+
+	/* Hides the slider so custom styles can be added */
+	background: transparent; 
+	border-color: transparent;
+	color: transparent;
+	background: #272B33;
+
+	height: 4px;
+	border-radius: 0px;
+	cursor: pointer;
+	border: 1px solid #FFCF44;
+}
+
+.labori_slider::-ms-thumb
+{
+	background: #272B33;
+	cursor: pointer;
+	width: 10px;
+	height: 15px;
+	border: none;
+	border-radius: 2px;
+	border: 1px solid #FFCF44;
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.labori_slider::-webkit-slider-thumb 
+{
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    background: #272B33;
+	cursor: pointer;
+	width: 10px;
+	height: 15px;
+	border: none;
+	border-radius: 2px;
+	border: 1px solid #FFCF44;
+	margin-top:-7px;
+}
+
+.labori_slider::-moz-range-thumb 
+{
+    background: #272B33;
+	cursor: pointer;
+	width: 10px;
+	height: 15px;
+	border: none;
+	border-radius: 2px;
+	border: 1px solid #FFCF44;
+}
+
+/**********************************************************/
+/*POPUP BLOCK	                           			  	  */
+/**********************************************************/
+#labori_popup_overlay
+{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.50);
+	z-index: 999999
+}
+
+#labori_popup_container
+{
+	position: fixed;
+	top:20%;
+	left:40%;
+	width:300px;
+	height:auto;
+	color: #F1F1F1;
+	border: 2px solid #FF6951;
+}
+
+.labori_popup_container_success
+{
+	border: 2px solid #FFCF44 !important;
+}
+
+#labori_popup_cap
+{
+	font-size:15pt;
+	width:auto;
+	padding:10px;
+	display: block;
+	border-top-left-radius: 2px;
+	border-top-right-radius: 2px;
+	background: #272B33;
+	border-bottom: 2px solid #FF6951;
+	color: #FF6951;
+}
+
+.labori_popup_cap_success
+{
+	border-bottom: 2px solid #FFCF44  !important;
+	color: #FFCF44  !important;
+}
+
+#labori_popup_cap i
+{
+	margin-right:10px;
+}
+
+#labori_popup_body
+{
+	width:auto;
+	height:auto;
+	padding:10px;
+	display: block;
+	background: #363F4A;
+	border-bottom-left-radius:  2px;
+	border-bottom-right-radius:  2px;
+	line-height: 25px;
+}
+
+/**********************************************************/
+/*FORM                      					  		  */
+/**********************************************************/
+.labori_form_feedback
+{
+	font-size: 0.6em;
+	color: #FF6951;
+}
+
+.labori_form_question_holder
+{
+	width:100%;
+	margin-top: 20px;
+}
+
+.labori_form_question_title
+{
+	background: #272B33;
+	font-size: 1.2em;
+	padding-left: 10px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	border-top-left-radius: 2px;
+	border-top-right-radius: 2px;
+	color: #FFCF44;
+}
+
+.labori_form_question_content
+{
+	background: #4D5661;
+	padding: 10px;
+	border-bottom-left-radius: 2px;
+	border-bottom-right-radius: 2px;
+	text-align: justify;
+	border: 2px solid #272B33;
+}
+
+.labori_form_question_text
+{
+	float: left;
+	width: 48%;
+	background: #404954;
+	padding: 5px;
+	border-radius: 2px;
+}
+
+.labori_form_question_entry 
+{
+	float:right;
+	width:48%;
+}
+
+/**********************************************************/
+/*UPLOAD BLOCK                      					  */
+/**********************************************************/
+.labori_upload_holder
+{
+	margin-right:10px;
+	margin-bottom:10px;
+	float:left;
+	color: #F1F1F1;
+	width:100%;
+	min-width: 600px;
+}
+
+.labori_upload_title
+{
+	font-size:15pt;
+	width:auto;
+	padding:10px;
+	display: block;
+	border-top-left-radius: 2px;
+	border-top-right-radius: 2px;
+	background: #272B33;
+	border-bottom: 2px solid #FFCF44;
+}
+
+.labori_upload_title i
+{
+	color: #FFCF44;
+	margin-right:10px;
+}
+
+.labori_upload_body
+{
+	width: 100%;
+	text-align: left;
+	border-collapse: collapse;
+	background: #363F4A;
+}
+
+.labori_upload_body td
+{
+	padding:10px;
+	border-right: 2px dotted #272B33;
+}
+
+.labori_upload_fields
+{
+	width:10%;
+}
+
+.labori_upload_desc
+{
+	width: 40%;
+}
+
+
+/**********************************************************/
+/*JOB BLOCKS                      					  	  */
+/**********************************************************/
+.labori_job_log_holder
+{
+	height: 100px;
+	overflow-y: auto;
+}
+
+.labori_job_log_placeholder
+{
+	margin-top: 5%;
+	color: #6F7883;
+}
+
+.labori_job_log_placeholder i
+{
+	font-size: 20pt;
+	margin-right: 10px;
+}
+
+.labori_job_progress_holder
+{
+	position: relative;
+	max-width: 100px;
+	max-height: 100px;
+	min-width: 100px;
+	min-height: 100px;
+	margin: auto;
+	padding:5px;
+}
+
+.labori_job_progress_fields
+{
+	text-align: center;
+}
+
+/**********************************************************/
+/*QUERY_BUILDER                     					  */
+/**********************************************************/
+.loaded_query_field_value
+{
+	background: #4E5762;
+	padding: 2px;
+	border-radius: 2px;
+	margin-bottom: 5px;
+	padding-left: 5px;
+}
+
+.query_condition
+{
+	margin-bottom: 10px;
+	padding: 5px;
+	background: #3E4752;
+	border-radius: 2px;
+}
+
+.query_condition_inner_element
+{
+	margin-top: 5px;
+	border-top: 1px solid #717A85;
+	padding-top: 5px;
+}
+
+.labori_query_field_group
+{
+	max-width: 100%;
+	width:100%;
+	border-radius: 2px;
+	padding-top:5px;
+	padding-bottom:5px;
+	margin-bottom: 10px;
+	background:#272B33;
+	border: 2px solid black;
+}
+
+.labori_group_title_dark
+{
+	color: #3E4752;
+	margin-bottom: 10px;
+	font-weight: bold;
+	border-bottom: 1px dashed #48515C;
+}
+
+.labori_group_title_light
+{
+	margin-bottom: 10px;
+	font-weight: bold;
+	border-bottom: 1px dashed;
+}
+
+.labori_query_group
+{
+	max-width: 100%;
+	width:100%;
+	border-radius: 2px;
+	padding-top:5px;
+	padding-bottom:5px;
+	margin-bottom: 10px;
+	background:#717A85;
+	border: 2px solid #F1F1F1;
+}
+
+.condition_divider
+{
+	width: 100%;
+	text-align: center;
+	margin-bottom: 10px;
+	border-radius: 2px;
+	color: #3E4752;
+	display: inline-block;
+}
+
+.query_divider_strikethrough
+{
+	display: inline-block;
+	border-bottom: 1px solid #3E4752;
+	width: 30%;
+	height: 1px;
+	margin: 5px;
+}
+
+.query_divider
+{
+	text-align: center;
+	width: 100%;
+	border-radius: 2px;
+	margin-bottom: 10px;
+	font-weight: bold;
+}
+
+.labori_query_field_group .padding_div
+{
+	margin-top:5px;
+	margin-left:10px;
+	margin-right:10px;
+}
+
+.labori_query_group .padding_div
+{
+	margin-top:5px;
+	margin-left:10px;
+	margin-right:10px;
+}
+
+.labori_query_button_long
+{
+	margin-bottom: 10px;
+	width: 100%;
+	text-align: center;
+	border-radius: 30px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	cursor: pointer;
+	background-color: #272B33;
+	border: none;
+	color: #FFCF44;
+	-webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -ms-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+    white-space: nowrap;
+    overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.labori_query_button_long.green_button
+{
+	color:#1EB980;
+}
+
+.labori_query_button_long.red_button
+{
+	color:#FF6951;
+}
+
+.labori_query_button_long:hover
+{
+	background-color:#FFCF44;
+	color: #272B33;
+	-webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -ms-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+}
+
+.labori_query_button_long.red_button:hover
+{
+	background-color:#FF6951;
+	color: #363F4A;
+}
+
+.labori_query_button_long.green_button:hover
+{
+	background-color:#1EB980;
+	color: #363F4A;
+}
+
+/**********************************************************/
+/*REPORT BLOCK                      					  */
+/**********************************************************/
+.labori_report_holder
+{
+	margin-right:10px;
+	margin-bottom:10px;
+	float:left;
+	color: #F1F1F1;
+	width:100%;
+	min-width: 600px;
+	background: #363F4A
+}
+
+.labori_report_holder .labori_content_block_tab_container
+{
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	width:98%;
+}
+
+.labori_report_title
+{
+	font-size:15pt;
+	width:auto;
+	padding:10px;
+	display: block;
+	border-top-left-radius: 2px;
+	border-top-right-radius: 2px;
+	background: #272B33;
+	border-bottom: 2px solid #FFCF44;
+}
+
+.labori_report_title i
+{
+	color: #FFCF44;
+	margin-right:10px;
+}
+
+.labori_report_body
+{
+	width: 100%;
+	text-align: left;
+	border-collapse: collapse;
+	background: #363F4A;
+}
+
+.labori_report_body td
+{
+	padding:10px;
+	border-right: 2px dotted #272B33;
+}
+
+.labori_report_desc
+{
+	width: 30%;
+}
+
+.labori_report_fields
+{
+	width: 51%;
+}
+
+.labori_report_export
+{
+	text-align: center;
+}
+
+.labori_report_button
+{
+	width: 50px;
+	border-radius: 2px;
+	height:50px;
+	margin-right:10px;
+	margin-bottom:10px;
+	background: #272B33;
+	float: left;
+	text-align: center;
+	padding:10px;
+	font-size: 35pt;
+	display: inline-block;
+	-webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -ms-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+ }
+
+.labori_report_button:hover
+{
+	background: #FFCF44;
+	color:#363F4A;
+	cursor: pointer;
+	-webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -ms-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+}
+
+.labori_report_button.disabled
+{
+	background: #AFAFB2 !important;
+	color: #F1F1F1 !important;
+	cursor: default !important;
+}
+
+/**********************************************************/
+/*ANOTATED BLOCK                       					  */
+/**********************************************************/
+.labori_tagged_word
+{
+	color: #FFCF44;
+}
+
+.labori_annotation_holder
+{
+	background: #272B33;
+	padding: 10px;
+	line-height: 30px;
+	margin-bottom: 10px;
+	border-radius: 2px;
+}
+
+.labori_annotation_title
+{
+	font-size: 18pt;
+	opacity: 0.3;
+	border-bottom: 1px dotted gray;
+}
+
+/**********************************************************/
+/*CONTENT BLOCK                       					  */
+/**********************************************************/
+.labori_content_block_tab
+{
+	float: left;
+	min-width: 100px;
+	padding: 5px;
+	text-align: center;
+	margin-right: 10px;
+	background: #272B33;
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+	-webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -ms-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+}
+
+.labori_content_block_tab:hover
+{
+	background: #FFCF44;
+	color:#363F4A;
+	cursor: pointer;
+	-webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -ms-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+}
+
+.labori_content_block_tab.selected_tab
+{
+	background: #FFCF44;
+	color:#363F4A;
+}
+
+.labori_content_block_tab_container
+{
+	clear:both;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	width: 100%;
+	border-bottom: 3px solid #FFCF44;
+}
+
+.labori_content_divider
+{
+	clear: both;
+	margin-bottom: 20px;
+	width: 100%;
+	height: 10px;
+	border-bottom: 2px dotted #2B343F;
+}
+
+.labori_content_divider_labeled
+{
+	clear: both;
+	font-size: 1.3em;
+	border-bottom: 2px dotted #F1F1F1;
+	opacity: 0.2;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding-top: 15px;
+	padding-bottom: 5px;
+	width:100%;
+}
+
+.labori_content_block_container
+{
+	margin-right:10px;
+	margin-bottom:10px;
+	float:left;
+	color: #F1F1F1;
+	width: auto;
+	min-width: 100%;
+}
+
+.labori_content_block_cap
+{
+	font-size:15pt;
+	width:auto;
+	padding:10px;
+	display: block;
+	border-top-left-radius: 2px;
+	border-top-right-radius: 2px;
+	background: #272B33;
+	border-bottom: 2px solid #FFCF44;
+}
+
+.labori_content_block_cap i
+{
+	color: #FFCF44;
+	margin-right:10px;
+}
+
+.labori_content_block_content
+{
+	width:auto;
+	height:auto;
+	padding:10px;
+	display: block;
+	background: #363F4A;
+	border-bottom-left-radius:  2px;
+	border-bottom-right-radius:  2px;
+	line-height: 25px;
+}
+
+.labori_content_block_divider
+{
+	margin-bottom: 10px;
+	margin-top:10px;
+	border-bottom: 2px dotted #272B33;
+}
+
+/**********************************************************/
+/*TEXT COLORS                                			  */
+/**********************************************************/
+/*Important text, small name for practicality*/
+.imp_text
+{
+	color:#FFCF44;
+	font-weight: bold;
+}
+
+.imp_text_red
+{
+	color:#FF6951;
+	font-weight: bold;
+}
+
+.imp_text_green
+{
+	color:#1EB980;
+	font-weight: bold;
+}
+
+/**********************************************************/
+/*WARNINGS                              			  	  */
+/**********************************************************/
+.labori_required_input_override
+{
+	border-color: #FF6951 !important;
+}
+
+.labori_required_table_override .labori_table_header_item
+{
+	background: #FF6951;
+	color: #FEB59D;
+}
+
+.labori_required_table_override .labori_table_header_item
+{
+	border-right: 2px solid #E44E36;
+}
+
+.labori_input_warning
+{
+	color: #FF6951;
+	cursor: pointer;
+	float: left;
+	display: inline-block; 
+	margin-top: 7px;
+	margin-right: 2px;
+}
+
+.labori_field_error
+{
+	float: left !important;
+	width: calc(100% - 30px) !important;
+	min-width: calc(100% - 30px)  !important;
+	max-width: calc(100% - 30px)  !important;
+	display: inline-block !important;
+}
+
+/**********************************************************/
+/*TEXT INPUT                                			  */
+/**********************************************************/
+.labori_text_input
+{
+	border: 2px solid #FFCF44;
+	background: #272B33;
+	padding-left: 5px;
+	color: #F1F1F1;
+	box-shadow: none !important;
+	border-radius: 2px;
+	height: 28px;
+}
+
+.labori_text_input.labori_field_error
+{
+	background: #D43E26 !important;
+	border-color: #FF6951 !important;
+}
+
+.labori_text_input:-moz-placeholder 
+{
+    box-shadow:none !important;
+}
+
+.labori_text_input:invalid 
+{
+    border-color:#FF6951;
+}
+
+.labori_textarea
+{
+	max-width: 100%;
+	min-width: 100%;
+	background: #272B33;
+	border: 2px solid #FFCF44;
+	border-radius: 2px;
+	color: inherit;
+	font-family: inherit;
+	font-size: 10pt;
+	padding:3px;
+	box-shadow:none !important;
+    outline:none;
+}
+
+.labori_textarea.labori_field_error
+{
+	background: #D43E26 !important;
+	border-color: #FF6951 !important;
+}
+
+.labori_textarea:invalid
+{
+	border-color:#FF6951;
+}
+
+/**********************************************************/
+/*BUTTON                                          		  */
+/**********************************************************/
+.labori_button_alert
+{
+	position: absolute;
+	width: 11px;
+	font-size: 0.6em;
+	z-index: 3;
+	top: -7px;
+	background-color: #b8221d;
+	left: 20px;
+	color: white;
+	border: none;
+	border-radius: 50px;
+	display: inline-block;
+	text-align: center;
+	text-decoration: none;
+	padding:4px;
+}
+
+.labori_button_round
+{
+	background-color: #272B33;
+	border: none;
+	color: #FFCF44;
+	border-radius: 50px;
+	display: inline-block;
+	width: 17px;
+	padding: 10px;
+	text-decoration: none;
+	cursor: pointer;
+	text-align: center;
+	-webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -ms-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+    white-space: nowrap;
+}
+
+.labori_vertical_tab
+{
+	color: #F1F1F1;
+	background: #272B33;
+	cursor: pointer;
+	margin-bottom: 15px;
+	padding: 10px;
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+	-webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -ms-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+    white-space: nowrap;
+    position: relative;
+}
+
+.labori_vertical_tab:after
+{
+	position: absolute;
+	bottom: 0;
+	height: 0px;
+	width: 0;
+	left: 100%;
+	border: 22px solid transparent;
+	border-left-color: #272b33;
+	content: "";
+	top: 0px;
+	-webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -ms-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+}
+
+.labori_vertical_tab:hover:after
+{
+	border-left-color:#FFCF44;
+}
+
+.labori_vertical_tab:hover
+{
+	background:#FFCF44;
+	color:#363F4A;
+}
+
+.labori_vertical_tab.selected_tab 
+{
+	background:#FFCF44; 
+	color: #363F4A;
+}
+
+.labori_vertical_tab.selected_tab:after
+{
+	border-left-color:#FFCF44;
+}
+
+.labori_content_block_tab .labori_button_round.tiny_button
+{
+	margin-left: 2px;
+	margin-top: 3px;
+	color: #F1F1F1;
+	background: #272B33;
+
+}
+
+.labori_content_block_tab.selected_tab .labori_button_round.tiny_button
+{
+	background:#FFCF44; 
+	color: #363F4A;
+}
+
+.labori_content_block_tab:hover .labori_button_round.tiny_button
+{
+	background:#FFCF44;
+	color: #363F4A;
+}
+
+.labori_content_block_tab .labori_button_round.tiny_button:hover
+{
+	color:#FFCF44;
+	background: #272B33;
+}
+
+.labori_button_round.tiny_button
+{
+	float: right;
+	display: inline-block;
+	width: 9px;
+	height: 9px;
+	padding: 5px;
+	font-size: 7pt;
+}
+
+.labori_button_round.tiny_button.gray_button
+{
+	background: #717A85;
+	color: #3E4752;
+}
+
+.labori_button_round.tiny_button.gray_button:hover
+{
+	background: #14141A;
+	color: #3E4752;
+}
+
+
+.labori_button_round.small_button
+{
+	float: right;
+	display: inline-block;
+	width: 19px;
+	height: 18px;
+	padding: 5px;
+	font-size: 11pt;
+}
+
+.labori_button_round.small_button i
+{
+	margin-top: 2px;
+}
+
+.labori_button_round.labori_button_round_wide
+{
+	width: auto;
+	height: auto;
+	padding-left: 10px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	padding-right: 10px;
+	min-width: 125px;
+	min-height: 25px;
+}
+
+.labori_button_round.labori_button_round_short
+{
+	width: auto;
+	height: auto;
+	padding-left: 10px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	padding-right: 10px;
+	min-width: 100px;
+	min-height: 25px;
+}
+
+.labori_button_round:hover
+{
+	background-color:#FFCF44;
+	color: #363F4A;
+	-webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -ms-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+}
+
+.labori_button_round a
+{
+	color:#FFCF44;
+}
+
+.labori_button_round:hover a
+{
+	color: #363F4A;
+	-webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -ms-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+}
+
+.labori_button_round.green_button
+{
+	color:#1EB980;
+}
+
+.labori_button_round.green_important
+{
+	border: 2px solid #1EB980;
+	font-weight: bold;
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+
+.labori_button_round.green_important.disabled
+{
+	border: 2px solid #AFAFB2;
+}
+
+.labori_button_round.disabled
+{
+	cursor: default;
+	background-color:#AFAFB2 !important;
+	color: lightgray !important;
+	border: none;
+}
+
+.labori_button_round.green_button:hover
+{
+	background-color:#1EB980;
+	color: #363F4A;
+}
+
+.labori_button_round.red_button
+{
+	color:#FF6951;
+}
+
+.labori_button_round.red_button:hover
+{
+	background-color:#FF6951;
+	color: #363F4A;
+}
+
+.labori_button_round.yellow_button
+{
+	color:#44C0FF;
+}
+
+.labori_button_round.yellow_button:hover
+{
+	background-color:#44C0FF;
+	color: #363F4A;
+}
+
+.labori_button
+{
+	background-color: #272B33;
+	border: none;
+	color: #FFCF44;
+	text-decoration: none;
+	cursor: pointer;
+	text-align: center;
+	padding-left: 10px;
+	padding-right: 10px;
+	line-height: 35px;
+	width: 200px;
+	border-radius: 2px;
+	-webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -ms-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+    white-space: nowrap;
+}
+
+.labori_button.red_button
+{
+	color:#FF6951;
+}
+
+.labori_button.red_button:hover
+{
+	background-color:#FF6951;
+	color: #363F4A;
+}
+
+.labori_button:hover
+{
+	background-color:#FFCF44;
+	color: #363F4A;
+	-webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -ms-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+}
+
+.labori_button.disabled
+{
+	cursor: default;
+	background-color:#AFAFB2 !important;
+	color: lightgray !important;
+	border: none;
+}
+
+.labori_button:disabled
+{
+	cursor: default;
+	background-color:#AFAFB2 !important;
+	color: lightgray !important;
+	border: none;
+}
+
+/**********************************************************/
+/*AUTOCOMPLETE                        			  	  	  */
+/**********************************************************/
+.labori_autocomplete_single_holder_item
+{
+	margin-top: -3px;
+	border-radius: 10px;
+	border: 2px solid #363F4A;
+	font-size: 8pt;
+	background: #272B33;
+	padding: 5px;
+	padding-left: 5px;
+	padding-left: 10px;
+	line-height: normal;
+}
+
+.labori_autocomplete_list
+{
+	display: none;
+	position: absolute;
+	top: 30px;
+	right: 50px;
+	left: 0px;
+	z-index: 999;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	background-color: #272B33;
+	max-height: 200px;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.labori_autocomplete_option
+{
+	margin: 0;
+	padding-left: 15px;
+	border-bottom: 2px solid #363F4A;
+	-moz-transition: all 0.15s ease-in;
+	-o-transition: all 0.15s ease-in;
+	-webkit-transition: all 0.15s ease-in;
+	transition: all 0.15s ease-in;
+	height: auto;
+	min-height: 25px;
+	line-height: 25px;
+	cursor: pointer;
+}
+
+.labori_autocomplete_option a
+{
+	color: #F1F1F1;
+	text-decoration: none;
+	-moz-transition: all 0.15s ease-in;
+	-o-transition: all 0.15s ease-in;
+	-webkit-transition: all 0.15s ease-in;
+	transition: all 0.15s ease-in;
+}
+
+.labori_autocomplete_option:hover
+{
+	color: #272B33;
+	background-color: #FFCF44;
+}
+
+.labori_autocomplete_option:hover a
+{
+	color: #272B33;
+}
+
+/**********************************************************/
+/*PAGE SELECTOR	                           			  	  */
+/**********************************************************/
+.labori_page_selector
+{
+	font-size:10pt;
+	float:right;
+	margin-top: 5px;
+}
+
+.labori_page_selector_button
+{
+	float:left;
+	cursor: pointer;
+	margin-top: 3px;
+	margin-left: 5px;
+}
+
+.labori_page_selector_button.disabled i
+{
+	color: #5A636E;
+}
+
+/**********************************************************/
+/*TABLE                                          		  */
+/**********************************************************/
+.labori_table_title
+{
+	font-size: 15pt;
+	border-bottom: 2px solid #FFCF44;
+	font-weight: normal;
+	color: white !important;
+}
+
+.labori_table_title i
+{
+	margin-right: 10px;
+	margin-left: 5px;
+	color: #FFCF44;
+}
+
+.labori_table
+{
+	width: 100%;
+	text-align: left;
+	border-collapse: collapse;
+}
+
+.labori_table tr:nth-child(odd)
+{
+	background: #48515C;
+}
+
+.labori_table tr:nth-child(even)
+{
+	background: #5A636E;
+}
+
+.labori_table .labori_table tr:nth-child(odd)
+{
+	background: #77808B;
+}
+
+.labori_table .labori_table tr:nth-child(even)
+{
+	background: #8D96A1;
+}
+
+.labori_table_header
+{
+	background: #272B33 !important;
+}
+
+.labori_table_header_item
+{
+	padding:5px;
+	border-right: 2px solid #363F4A;
+	color:#FFCF44;
+
+}
+
+.labori_table_row_item
+{
+	padding:5px;
+	border-right: 2px solid #363F4A;
+}
+
+/**********************************************************/
+/*MUTLI DROPDOWN                                          */
+/**********************************************************/
+.labori_multiinput_holder_item
+{
+	margin-top: 5px;
+	padding-left:5px;
+	padding-right:5px;
+	border-radius: 2px;
+	border: 2px dotted #363F4A;
+	font-size: 8pt;
+	padding: 3px;
+}
+
+.labori_multiinput_holder_item:hover
+{
+	background:#363F4A;
+}
+
+/**********************************************************/
+/*DROPDOWN                                          	  */
+/**********************************************************/
+.labori_select-hidden 
+{
+	display: none;
+	visibility: hidden;
+	padding-right: 10px;
+}
+
+.labori_select 
+{
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	font-size: 13px;
+	color: #fff;
+	width: 100%;
+	border: 2px solid #FFCF44;
+	border-radius: 2px;
+	
+}
+
+.labori_select-styled 
+{
+	background-color: #272B33;
+	padding-left: 5px;
+	-moz-transition: all 0.2s ease-in;
+	-o-transition: all 0.2s ease-in;
+	-webkit-transition: all 0.2s ease-in;
+	transition: all 0.2s ease-in;
+	height: 25px;
+	line-height: 25px;
+	text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    padding-right: 20px;
+}
+
+.labori_select-styled:after 
+{
+	content: "";
+    width: 0;
+    height: 0;
+    border: 7px solid transparent;
+    border-color: #fff transparent transparent transparent;
+    position: absolute;
+    top: 40%;
+	right: 5%;
+}
+
+.labori_select-styled:hover 
+{
+	color: #272B33;
+	background-color: #FFCF44;
+	border-color: #272B33 transparent transparent transparent;
+}
+
+.labori_required_input_override .labori_select-styled:hover 
+{
+	color: #272B33;
+	background-color: #ff6951;
+	border-color: #272B33 transparent transparent transparent;
+}
+
+.labori_select-styled:hover:after 
+{
+	border-color: #272B33 transparent transparent transparent;
+}
+
+.labori_select-options 
+{
+	display: none;
+	position: absolute;
+	top: -2px;
+	right: -2px;
+	left: -2px;
+	z-index: 999;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	background-color: #272B33;
+	border-top: 2px solid #272B33;
+	border-right: 2px solid #272B33;
+	border-left: 2px solid #272B33;
+	max-height: 200px;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.labori_select-options li 
+{
+	margin: 0;
+	padding-left:10px;
+	text-overflow: ellipsis;
+	overflow:hidden;
+	border-bottom: 2px solid #363F4A;
+	-moz-transition: all 0.15s ease-in;
+	-o-transition: all 0.15s ease-in;
+	-webkit-transition: all 0.15s ease-in;
+	transition: all 0.15s ease-in;
+	min-height: 25px;
+	height: auto;
+	line-height: 25px;
+}
+
+.labori_select-options li:hover 
+{
+	color: #272B33;
+	background-color: #FFCF44;
+}
+
+.labori_select-options li[rel="hide"] 
+{
+	display: none;
+}
+
